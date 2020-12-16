@@ -1,0 +1,23 @@
+{
+    "name": "nuxt-css-modules",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.32",
+        "@fortawesome/free-solid-svg-icons": "^5.15.1",
+        "@fortawesome/vue-fontawesome": "^2.0.0",
+        "core-js": "^3.6.5",
+        "css-wipe": "^4.3.0",
+        "nuxt": "^2.14.6"
+    },
+    "devDependencies": {
+        "node-sass": "^5.0.0",
+        "sass-loader": "^10.1.0"
+    }
+}
