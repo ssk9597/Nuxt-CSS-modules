@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a class="el-label" href="">{{ name }}</a>
+        <nuxt-link to="/label" class="el-label">{{ name }}</nuxt-link>
     </div>
 </template>
 
@@ -17,10 +17,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-a {
-    transition: 0.25s;
-    text-decoration: none;
-}
 .el-label {
     display: inline-block;
     padding: 0.2em 0.3em;
@@ -29,6 +25,8 @@ a {
     font-size: 0.75rem;
     font-weight: bold;
     border: 2px solid transparent;
+    transition: 0.25s;
+    text-decoration: none;
 
     &:focus,
     &:hover {

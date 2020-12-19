@@ -30,14 +30,14 @@
 
 <script>
 //h2
-import H2Heading1 from '@/components/Atoms/Heading/H2/Heading1';
-import H2Heading2 from '@/components/Atoms/Heading/H2/Heading2';
+import H2Heading1 from '@/components/Atoms/Heading/H2/H2Heading1';
+import H2Heading2 from '@/components/Atoms/Heading/H2/H2Heading2';
 //h3
-import H3Heading1 from '@/components/Atoms/Heading/H3/Heading1';
-import H3Heading2 from '@/components/Atoms/Heading/H3/Heading2';
+import H3Heading1 from '@/components/Atoms/Heading/H3/H3Heading1';
+import H3Heading2 from '@/components/Atoms/Heading/H3/H3Heading2';
 //h4
-import H4Heading1 from '@/components/Atoms/Heading/H4/Heading1';
-import H4Heading2 from '@/components/Atoms/Heading/H4/Heading2';
+import H4Heading1 from '@/components/Atoms/Heading/H4/H4Heading1';
+import H4Heading2 from '@/components/Atoms/Heading/H4/H4Heading2';
 
 export default {
     components: {

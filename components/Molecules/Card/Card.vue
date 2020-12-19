@@ -1,26 +1,47 @@
 <template>
     <div>
-        <div class="bl-card">
+        <nuxt-link to="/card" class="bl-card">
             <figure class="bl-card-imgWrapper">
-                <img src="~/assets/image/photo.jpg" alt="" />
+                <img :src="image" alt="" />
             </figure>
             <div class="bl-card-body">
-                <h3 class="bl-card-ttl">ユーザーを考えた設計で満足な体験を</h3>
+                <h3 class="bl-card-ttl">{{ title }}</h3>
                 <p class="bl-card-txt">
-                    提供するサービスやペルソナによって、Webサイトの設計は異なります。サービスやペルソナに合わせた設計を行うことにより、訪問者にストレスのないより良い体験を産み出し、満足を高めることとなります<br />私たちはお客様のサイトに合ったユーザビリティを考えるため、分析やヒアリングをきめ細かく実施、満足を体験できるクリエイティブとテクノロジーを設計・構築し、今までにない期待を超えたユーザー体験を提供いたします。
+                    <slot>デフォルト</slot>
                 </p>
             </div>
-        </div>
+        </nuxt-link>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'Card',
+    props: {
+        image: {
+            type: String,
+            default: require('~/assets/image/photo.jpg'),
+        },
+        title: {
+            type: String,
+            required: true,
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
 .bl-card {
+    display: block;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    color: currentColor;
+    text-decoration: none;
+    transition: 0.25s;
+
+    &:focus,
+    &:hover {
+        opacity: 0.75;
+    }
 
     &-imgWrapper {
         position: relative;
@@ -47,10 +68,35 @@ export default {};
         margin-bottom: 5px;
         font-size: 1.125rem;
         font-weight: bold;
+        transition: 0.25s;
     }
 
     &-txt {
+        font-size: 0.875rem;
         color: #777;
+        transition: 0.25s;
+    }
+}
+
+// //560px以上はタブレット
+@media screen and (min-width: 560px) {
+    .bl-card {
+        &-ttl {
+            font-size: 1.5rem;
+        }
+
+        &-txt {
+            font-size: 1rem;
+        }
+    }
+}
+
+// //960px以上はPC
+@media screen and (min-width: 960px) {
+    .bl-card {
+        &-ttl {
+            font-size: 1.75rem;
+        }
     }
 }
 </style>

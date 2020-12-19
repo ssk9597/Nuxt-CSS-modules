@@ -39,14 +39,14 @@
 
 <script>
 //hoverWhite
-import ButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/Button';
-import LargeButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/LargeButton';
-import ArrowButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/ArrowButton';
-import RoundButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/RoundButton';
+import ButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/ButtonHW';
+import LargeButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/LargeButtonHW';
+import ArrowButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/ArrowButtonHW';
+import RoundButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/RoundButtonHW';
 //hoverColor
-import ButtonHoverColor from '@/components/Atoms/Button/HoverColor/Button';
-import LargeButtonHoverColor from '@/components/Atoms/Button/HoverColor/LargeButton';
-import ArrowButtonHoverColor from '@/components/Atoms/Button/HoverColor/ArrowButton';
+import ButtonHoverColor from '@/components/Atoms/Button/HoverColor/ButtonHC';
+import LargeButtonHoverColor from '@/components/Atoms/Button/HoverColor/LargeButtonHC';
+import ArrowButtonHoverColor from '@/components/Atoms/Button/HoverColor/ArrowButtonHC';
 
 export default {
     components: {

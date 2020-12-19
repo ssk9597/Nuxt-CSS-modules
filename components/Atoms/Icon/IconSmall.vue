@@ -1,8 +1,8 @@
 <template>
     <div>
-        <a href="#" class="el-beforeIconButton btn-color-white">
+        <nuxt-link to="/icon" class="el-beforeIconButton btn-color">
             <fa class="icon" :icon="icon" />{{ name }}
-        </a>
+        </nuxt-link>
     </div>
 </template>
 
@@ -38,7 +38,7 @@ export default {
     font-weight: 900;
 }
 
-.btn-color-white {
+.btn-color {
     //colorはここから
     // http://clrs.cc/
     background-color: #ffffff;

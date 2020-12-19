@@ -1,20 +1,16 @@
 <template>
     <div>
-        <a href="#" class="el-btn btn-color-blue"> {{ name }}<fa class="icon" :icon="icon" /> </a>
+        <nuxt-link to="/button" class="el-btn btn-color">{{ name }}</nuxt-link>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'ArrowButton',
+    name: 'Button',
     props: {
         name: {
             type: String,
             required: true,
-        },
-        icon: {
-            type: String,
-            default: 'arrow-right',
         },
     },
 };
@@ -22,7 +18,6 @@ export default {
 
 <style lang="scss" scoped>
 .el-btn {
-    position: relative;
     display: inline-block;
     width: 300px;
     max-width: 100%;
@@ -33,19 +28,9 @@ export default {
     text-align: center;
     text-decoration: none;
     transition: 0.25s;
-    padding-right: 2em;
-    padding-left: 1.38em;
 }
 
-.icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0.83em;
-    font-weight: 900;
-}
-
-.btn-color-blue {
+.btn-color {
     //colorはここから
     // http://clrs.cc/
     background-color: #0074d9;

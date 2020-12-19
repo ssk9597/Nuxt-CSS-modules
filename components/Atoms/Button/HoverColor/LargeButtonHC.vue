@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a href="#" class="el-btn-large btn-color-blue"> 大ボタン </a>
+        <nuxt-link to="/button" class="el-btn-large btn-color"> 大ボタン </nuxt-link>
     </div>
 </template>
 
@@ -23,24 +23,24 @@ export default {
     max-width: 100%;
     padding: 25px 10px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-    color: #fff;
+    color: #fff; //change
     font-size: 1.375rem;
     text-align: center;
     text-decoration: none;
     transition: 0.25s;
 }
 
-.btn-color-blue {
+.btn-color {
     //colorはここから
     // http://clrs.cc/
-    background-color: #0074d9;
-    border: 2px solid transparent;
+    color: #0074d9; //change
+    border: 2px solid #0074d9; //change
+    background-color: #fff; //change
 
     &:focus,
     &:hover {
-        background-color: #fff;
-        border-color: currentColor;
-        color: #0074d9;
+        background-color: #0074d9; //change
+        color: #fff; //change
     }
 }
 </style>

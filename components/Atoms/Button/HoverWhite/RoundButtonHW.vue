@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a href="#" class="el-roundBtn btn-color-orange">{{ name }}</a>
+        <nuxt-link to="/button" class="el-roundBtn btn-color">{{ name }}</nuxt-link>
     </div>
 </template>
 
@@ -17,15 +17,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.text-center {
-    text-align: center;
-    padding-bottom: 24px;
-}
-.text-left {
-    text-align: left;
-    padding-bottom: 24px;
-}
-
 .el-roundBtn {
     display: inline-block;
     width: 236px;
@@ -39,7 +30,7 @@ export default {
     transition: 0.25s;
 }
 
-.btn-color-orange {
+.btn-color {
     //colorはここから
     // http://clrs.cc/
     background-color: #ff851b;

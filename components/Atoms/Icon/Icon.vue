@@ -1,7 +1,7 @@
 <template>
     <div>
         <span class="el-beforeIcon">
-            <a href="#"> <fa class="icon" :icon="icon" />{{ name }} </a>
+            <nuxt-link to="/icon"> <fa class="icon" :icon="icon" />{{ name }} </nuxt-link>
         </span>
     </div>
 </template>
