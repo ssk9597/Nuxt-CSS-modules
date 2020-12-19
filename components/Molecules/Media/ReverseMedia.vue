@@ -2,12 +2,12 @@
     <div>
         <div class="bl-media">
             <figure class="bl-media-imgWrapper">
-                <img src="~/assets/image/photo.jpg" alt="" />
+                <img :src="image" alt="" />
             </figure>
             <div class="bl-media-body">
-                <h3 class="bl-media-ttl">ユーザーを考えた設計で満足な体験を</h3>
+                <h3 class="bl-media-ttl">{{ title }}</h3>
                 <p class="bl-media-txt">
-                    提供するサービスやペルソナによって、Webサイトの設計は異なります。サービスやペルソナに合わせた設計を行うことにより、訪問者にストレスのないより良い体験を産み出し、満足を高めることとなります<br />私たちはお客様のサイトに合ったユーザビリティを考えるため、分析やヒアリングをきめ細かく実施、満足を体験できるクリエイティブとテクノロジーを設計・構築し、今までにない期待を超えたユーザー体験を提供いたします。
+                    <slot>デフォルト</slot>
                 </p>
             </div>
         </div>
@@ -15,27 +15,35 @@
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'Media',
+    props: {
+        image: {
+            type: String,
+            default: require('~/assets/image/photo.jpg'),
+        },
+        title: {
+            type: String,
+            default: 'ユーザーを考えた設計で満足な体験を',
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
 .bl-media {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    flex-direction: row-reverse;
 
     &-imgWrapper {
-        flex: 0 1 27.58333%;
-
         & img {
             width: 100%;
+            margin-bottom: 24px;
         }
     }
 
     &-body {
-        flex: 1;
-        margin-right: 3.33333%;
-
         &*:last-child {
             margin-bottom: 0;
         }
@@ -46,14 +54,45 @@ export default {};
         font-size: 1.125rem;
         font-weight: bold;
     }
+
+    &-txt {
+        font-size: 0.875rem;
+    }
 }
 
-@media screen and (max-width: 768px) {
+// //560px以上はタブレット
+@media screen and (min-width: 560px) {
     .bl-media {
-        display: block;
+        &-ttl {
+            font-size: 1.5rem;
+        }
+
+        &-txt {
+            font-size: 1rem;
+        }
+    }
+}
+
+// //960px以上はPC
+@media screen and (min-width: 960px) {
+    .bl-media {
+        flex-direction: row-reverse;
 
         &-imgWrapper {
-            margin-bottom: 20px;
+            flex-basis: 30%;
+            margin-left: 3%;
+
+            & img {
+                margin-bottom: 0;
+            }
+        }
+
+        &-body {
+            flex-basis: 67%;
+        }
+
+        &-ttl {
+            font-size: 1.75rem;
         }
     }
 }

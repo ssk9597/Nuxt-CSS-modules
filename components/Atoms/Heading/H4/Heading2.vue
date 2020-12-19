@@ -1,14 +1,14 @@
 <template>
     <div>
-        <span class="el-label">{{ name }}</span>
+        <h3 class="el-lv3Heading">{{ title }}</h3>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'Lable',
+    name: 'Heading2',
     props: {
-        name: {
+        title: {
             type: String,
             required: true,
         },
@@ -17,12 +17,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.el-label {
-    display: inline-block;
-    padding: 0.2em 0.3em;
-    background-color: #ff851b;
-    color: #fff;
-    font-size: 0.75rem;
+.el-lv3Heading {
+    padding-bottom: 0.5rem;
+    border-bottom: solid 3px #0074d9;
+    font-size: 1.25rem;
     font-weight: bold;
 }
 </style>

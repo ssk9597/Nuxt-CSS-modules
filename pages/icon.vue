@@ -1,9 +1,14 @@
 <template>
     <div>
         <!-- ダウンロードボタン -->
-        <IconSmall />
+        <div class="text-center">
+            <IconSmall name="ダウンロード" icon="download" />
+        </div>
+
         <!-- PDFボタン -->
-        <Icon />
+        <div class="text-center">
+            <Icon name="ファイル名.pdf" icon="file-pdf" />
+        </div>
     </div>
 </template>
 
@@ -19,4 +24,9 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.text-center {
+    text-align: center;
+    padding-bottom: 24px;
+}
+</style>

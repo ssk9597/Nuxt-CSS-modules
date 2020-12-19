@@ -1,31 +1,26 @@
 <template>
     <div>
-        <div class="text-center">
-            <a href="#" class="el-btn btn-color-blue">
-                標準ボタン<fa class="icon" icon="arrow-right" />
-            </a>
-        </div>
-        <div class="text-left">
-            <a href="#" class="el-btn btn-color-blue">
-                標準ボタン <fa class="icon" icon="arrow-right" />
-            </a>
-        </div>
+        <a href="#" class="el-btn btn-color-blue"> {{ name }}<fa class="icon" :icon="icon" /> </a>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'ArrowButton',
+    props: {
+        name: {
+            type: String,
+            required: true,
+        },
+        icon: {
+            type: String,
+            default: 'arrow-right',
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
-.text-center {
-    text-align: center;
-    padding-bottom: 24px;
-}
-.text-left {
-    text-align: left;
-    padding-bottom: 24px;
-}
 .el-btn {
     position: relative;
     display: inline-block;

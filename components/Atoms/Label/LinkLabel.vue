@@ -1,20 +1,22 @@
 <template>
     <div>
-        <div class="text-center">
-            <a class="el-label" href="">NEWS</a>
-        </div>
+        <a class="el-label" href="">{{ name }}</a>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'LinkLable',
+    props: {
+        name: {
+            type: String,
+            required: true,
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
-.text-center {
-    text-align: center;
-    padding-bottom: 25px;
-}
 a {
     transition: 0.25s;
     text-decoration: none;

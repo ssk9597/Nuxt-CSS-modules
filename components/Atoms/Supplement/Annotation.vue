@@ -1,11 +1,19 @@
 <template>
     <div>
-        <strong class="el-caution">※注釈が入ります</strong>
+        <strong class="el-caution">{{ text }}</strong>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'Annotation',
+    props: {
+        text: {
+            type: String,
+            required: true,
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>

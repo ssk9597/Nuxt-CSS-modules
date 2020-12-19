@@ -1,9 +1,18 @@
 <template>
     <div>
         <!-- 注意を促す -->
-        <Annotation />
+        <div class="container">
+            <div class="text-center">
+                <Annotation text="※注釈が入ります" />
+            </div>
+        </div>
+
         <!-- 補足 -->
-        <Supplement />
+        <div class="container">
+            <div class="text-center">
+                <Supplement text="※注釈が入ります" />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -19,5 +28,12 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+.container {
+    padding-bottom: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
 </style>

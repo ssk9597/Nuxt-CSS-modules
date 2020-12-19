@@ -1,20 +1,19 @@
 <template>
     <div>
-        <div class="text-center">
-            <a href="#" class="el-roundBtn btn-color-orange">
-                標準ボタン
-            </a>
-        </div>
-        <div class="text-left">
-            <a href="#" class="el-roundBtn btn-color-orange">
-                標準ボタン
-            </a>
-        </div>
+        <a href="#" class="el-roundBtn btn-color-orange">{{ name }}</a>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'RoundButton',
+    props: {
+        name: {
+            type: String,
+            required: true,
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>

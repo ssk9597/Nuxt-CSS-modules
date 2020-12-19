@@ -1,11 +1,25 @@
 <template>
     <div>
         <!-- ラベル -->
-        <Label />
+        <div class="container">
+            <div class="text-center">
+                <Label name="NEWS" />
+            </div>
+        </div>
+
         <!-- リンクラベル -->
-        <LinkLabel />
+        <div class="container">
+            <div class="text-center">
+                <LinkLabel name="NEWS" />
+            </div>
+        </div>
+
         <!-- 楕円ラベル -->
-        <RoundLabel />
+        <div class="container">
+            <div class="text-center">
+                <RoundLabel name="NEWS" />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -24,4 +38,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+    padding-bottom: 30px;
+}
+
+.text-center {
+    text-align: center;
+}
 </style>

@@ -1,11 +1,19 @@
 <template>
     <div>
-        <p class="el-note">※注釈が入ります</p>
+        <p class="el-note">{{ text }}</p>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'Supplement',
+    props: {
+        text: {
+            type: String,
+            required: true,
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>

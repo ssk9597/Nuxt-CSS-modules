@@ -1,23 +1,28 @@
 <template>
     <div>
-        <div class="text-center">
-            <a href="#" class="el-beforeIconButton btn-color-white">
-                <fa class="icon" icon="download" />ダウンロード
-            </a>
-        </div>
+        <a href="#" class="el-beforeIconButton btn-color-white">
+            <fa class="icon" :icon="icon" />{{ name }}
+        </a>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'IconSmall',
+    props: {
+        name: {
+            type: String,
+            required: true,
+        },
+        icon: {
+            type: String,
+            default: 'download',
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
-.text-center {
-    text-align: center;
-    padding-bottom: 24px;
-}
-
 .el-beforeIconButton {
     position: relative;
     display: inline-block;

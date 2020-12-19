@@ -1,27 +1,22 @@
 <template>
     <div>
-        <div class="text-center">
-            <a href="#" class="el-btn btn-color-navy"> 標準ボタン </a>
-        </div>
-        <div class="text-left">
-            <a href="#" class="el-btn btn-color-navy"> 標準ボタン </a>
-        </div>
+        <a href="#" class="el-btn btn-color-blue">{{ name }}</a>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'Button',
+    props: {
+        name: {
+            type: String,
+            required: true,
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
-.text-center {
-    text-align: center;
-    padding-bottom: 24px;
-}
-.text-left {
-    text-align: left;
-    padding-bottom: 24px;
-}
 .el-btn {
     display: inline-block;
     width: 300px;
@@ -35,17 +30,17 @@ export default {};
     transition: 0.25s;
 }
 
-.btn-color-navy {
+.btn-color-blue {
     //colorはここから
     // http://clrs.cc/
-    background-color: #001f3f;
+    background-color: #0074d9;
     border: 2px solid transparent;
 
     &:focus,
     &:hover {
         background-color: #fff;
         border-color: currentColor;
-        color: #001f3f;
+        color: #0074d9;
     }
 }
 </style>

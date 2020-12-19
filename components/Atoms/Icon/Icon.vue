@@ -1,13 +1,25 @@
 <template>
     <div>
         <span class="el-beforeIcon">
-            <a href="#"> <fa class="icon" icon="file-pdf" />ファイル名.pdf </a>
+            <a href="#"> <fa class="icon" :icon="icon" />{{ name }} </a>
         </span>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'Icon',
+    props: {
+        name: {
+            type: String,
+            required: true,
+        },
+        icon: {
+            type: String,
+            default: 'file-pdf',
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>

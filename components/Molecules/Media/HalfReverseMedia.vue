@@ -76,11 +76,11 @@ export default {
 // //960px以上はPC
 @media screen and (min-width: 960px) {
     .bl-media {
-        flex-direction: row;
+        flex-direction: row-reverse;
 
         &-imgWrapper {
             flex-basis: 48%;
-            margin-right: 4%;
+            margin-left: 4%;
 
             & img {
                 margin-bottom: 0;

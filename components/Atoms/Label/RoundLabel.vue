@@ -1,19 +1,20 @@
 <template>
-    <div class="text-center">
-        <span class="el-roundLabel"> NEWS </span>
-    </div>
+    <span class="el-roundLabel">{{ name }}</span>
 </template>
 
 <script>
-export default {};
+export default {
+    name: 'RoundLable',
+    props: {
+        name: {
+            type: String,
+            required: true,
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
-.text-center {
-    text-align: center;
-    padding-bottom: 25px;
-}
-
 .el-roundLabel {
     display: inline-block;
     padding: 0.3em 0.9em;
