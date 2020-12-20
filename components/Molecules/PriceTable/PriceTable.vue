@@ -1,62 +1,22 @@
 <template>
     <div>
         <ul class="price-ul">
-            <li class="price-li">
+            <li class="price-li" v-for="table in tables" :key="table.id">
                 <div class="price-header">
-                    <p class="price-ttl">Starter</p>
-                    <p class="price">6,000<span>円 / 月</span></p>
+                    <p class="price-ttl">{{ table.title }}</p>
+                    <p class="price">{{ table.price }}<span>円 / 月</span></p>
                 </div>
                 <div class="price-body">
                     <p class="price-lead">
-                        初めてインバウンドマーケティングを行う企業向けのスタートアッププラン
+                        {{ table.lead }}
                     </p>
                     <dl class="price-features">
-                        <dt>費用に含まれるコンタクト数</dt>
-                        <dd>1,000件</dd>
-                        <dt>月間サイト訪問者数</dt>
-                        <dd>3,000</dd>
-                        <dt>月間Eメール送信数上限</dt>
-                        <dd>最大コンタクト数の5倍</dd>
-                    </dl>
-                </div>
-            </li>
-
-            <li class="price-li">
-                <div class="price-header">
-                    <p class="price-ttl">Pro</p>
-                    <p class="price">96,000<span>円 / 月</span></p>
-                </div>
-                <div class="price-body">
-                    <p class="price-lead">
-                        マーケティング担当者の欲しい機能が網羅されたおすすめプラン
-                    </p>
-                    <dl class="price-features">
-                        <dt>費用に含まれるコンタクト数</dt>
-                        <dd>1,000件</dd>
-                        <dt>月間サイト訪問者数</dt>
-                        <dd>無制限</dd>
-                        <dt>月間Eメール送信数上限</dt>
-                        <dd>最大コンタクト数の10倍</dd>
-                    </dl>
-                </div>
-            </li>
-
-            <li class="price-li">
-                <div class="price-header">
-                    <p class="price-ttl">EnterPrise</p>
-                    <p class="price">384,000<span>円 / 月</span></p>
-                </div>
-                <div class="price-body">
-                    <p class="price-lead">
-                        マーケティングチームでインバウンドマーケティングを行える高機能プラン
-                    </p>
-                    <dl class="price-features">
-                        <dt>費用に含まれるコンタクト数</dt>
-                        <dd>10,000件</dd>
-                        <dt>月間サイト訪問者数</dt>
-                        <dd>無制限</dd>
-                        <dt>月間Eメール送信数上限</dt>
-                        <dd>最大コンタクト数の10倍</dd>
+                        <dt>{{ table.featureTitle1 }}</dt>
+                        <dd>{{ table.featureText1 }}</dd>
+                        <dt>{{ table.featureTitle2 }}</dt>
+                        <dd>{{ table.featureText2 }}</dd>
+                        <dt>{{ table.featureTitle3 }}</dt>
+                        <dd>{{ table.featureText3 }}</dd>
                     </dl>
                 </div>
             </li>
@@ -67,7 +27,12 @@
 <script>
 export default {
     name: 'PriceTable',
-    props: {},
+    props: {
+        tables: {
+            type: Array,
+            required: true,
+        },
+    },
 };
 </script>
 
