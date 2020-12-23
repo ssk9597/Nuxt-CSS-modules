@@ -31,7 +31,7 @@ export default {
 
 <style lang="scss" scoped>
 .faq {
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 
     &:last-child {
         margin-bottom: 0;
@@ -43,17 +43,16 @@ export default {
     position: relative;
     display: flex;
     align-items: flex-start;
-    min-height: 45px;
-    padding-left: 60px;
+    min-height: 30px;
+    padding-left: 50px;
 }
 
 .faq-q {
     margin-bottom: 15px;
-    font-size: 1.125rem;
     font-weight: bold;
 
     & .faq-txt {
-        line-height: 45px;
+        line-height: 30px;
     }
 
     & .faq-icon {
@@ -68,7 +67,8 @@ export default {
     border-bottom: 1px solid #ddd;
 
     & .faq-txt {
-        line-height: 45px;
+        font-size: 0.875rem;
+        line-height: 30px;
         margin-bottom: 20px;
     }
 
@@ -82,11 +82,49 @@ export default {
     position: absolute;
     top: 0;
     left: 0;
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    line-height: 45px;
+    line-height: 30px;
     text-align: center;
     font-weight: normal;
+}
+
+// //560px以上はタブレット
+@media screen and (min-width: 560px) {
+    .faq {
+        margin-bottom: 24px;
+    }
+
+    .faq-q,
+    .faq-a {
+        min-height: 45px;
+        padding-left: 60px;
+    }
+
+    .faq-q {
+        font-size: 1.125rem;
+
+        & .faq-txt {
+            line-height: 45px;
+        }
+    }
+
+    .faq-a {
+        & .faq-txt {
+            font-size: 1rem;
+            line-height: 45px;
+        }
+    }
+
+    .faq-icon {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+    }
+}
+
+// //960px以上はPC
+@media screen and (min-width: 960px) {
 }
 </style>

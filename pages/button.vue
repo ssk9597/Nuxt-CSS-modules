@@ -1,62 +1,41 @@
 <template>
     <div>
         <!-- ボタン -->
+        <!-- ①ボタンテキスト、②リンク先、③ボタンカラー、④ボタンサイズの調整、⑤アイコンの有無、⑥アイコン名 -->
         <div class="text-center">
-            <ButtonHoverWhite name="標準ボタン" />
+            <Button
+                name="標準ボタン"
+                link="/accordion"
+                btnColor="blue"
+                padding="padding: 10px"
+                icon="true"
+                iconName="arrow-right"
+            />
         </div>
-
-        <!-- 大ボタン -->
         <div class="text-center">
-            <LargeButtonHoverWhite name="大ボタン" />
-        </div>
-
-        <!-- 矢印付きボタン -->
-        <div class="text-center">
-            <ArrowButtonHoverWhite name="矢印付きボタン" icon="arrow-right" />
+            <Button name="標準ボタン" link="/accordion" btnColor="blue-w" padding="padding: 10px" />
         </div>
 
         <!-- 角丸ボタン -->
         <div class="text-center">
-            <RoundButtonHoverWhite name="角丸ボタン" />
-        </div>
-
-        <!-- ボタン -->
-        <div class="text-center">
-            <ButtonHoverColor name="標準ボタン" />
-        </div>
-
-        <!-- 大ボタン -->
-        <div class="text-center">
-            <LargeButtonHoverColor name="大ボタン" />
-        </div>
-
-        <!-- 矢印付きボタン -->
-        <div class="text-center">
-            <ArrowButtonHoverColor name="矢印付きボタン" icon="arrow-right" />
+            <RoundButton
+                name="角丸ボタン"
+                link="/accordion"
+                btnColor="gray"
+                padding="padding: 10px"
+            />
         </div>
     </div>
 </template>
 
 <script>
-//hoverWhite
-import ButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/ButtonHW';
-import LargeButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/LargeButtonHW';
-import ArrowButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/ArrowButtonHW';
-import RoundButtonHoverWhite from '@/components/Atoms/Button/HoverWhite/RoundButtonHW';
-//hoverColor
-import ButtonHoverColor from '@/components/Atoms/Button/HoverColor/ButtonHC';
-import LargeButtonHoverColor from '@/components/Atoms/Button/HoverColor/LargeButtonHC';
-import ArrowButtonHoverColor from '@/components/Atoms/Button/HoverColor/ArrowButtonHC';
+import Button from '@/components/Atoms/Button/Button';
+import RoundButton from '@/components/Atoms/Button/RoundButton';
 
 export default {
     components: {
-        ButtonHoverWhite,
-        LargeButtonHoverWhite,
-        ArrowButtonHoverWhite,
-        RoundButtonHoverWhite,
-        ButtonHoverColor,
-        LargeButtonHoverColor,
-        ArrowButtonHoverColor,
+        Button,
+        RoundButton,
     },
 };
 </script>

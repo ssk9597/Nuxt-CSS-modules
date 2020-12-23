@@ -2,12 +2,12 @@
     <div>
         <!-- ダウンロードボタン -->
         <div class="text-center">
-            <IconSmall name="ダウンロード" icon="download" />
+            <IconSmall name="ダウンロード" icon="download" link="/" />
         </div>
 
         <!-- PDFボタン -->
         <div class="text-center">
-            <Icon name="ファイル名.pdf" icon="file-pdf" />
+            <Icon name="ファイル名.pdf" icon="file-pdf" link="/" />
         </div>
     </div>
 </template>

@@ -10,7 +10,7 @@
             <transition name="accordion">
                 <dd class="accordion-body" v-if="!open">
                     <p class="accordion-txt">
-                        {{ body }}
+                        <slot>デフォルト（aタグなどHTML属性が入ることを見越してslotを使用）</slot>
                     </p>
                 </dd>
             </transition>
@@ -23,10 +23,6 @@ export default {
     name: 'Accordion',
     props: {
         title: {
-            type: String,
-            required: true,
-        },
-        body: {
             type: String,
             required: true,
         },

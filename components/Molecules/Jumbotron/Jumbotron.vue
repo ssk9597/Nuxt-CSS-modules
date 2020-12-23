@@ -14,7 +14,7 @@ export default {
     props: {
         image: {
             type: String,
-            default: 'background.jpg',
+            default: require('@/assets/image/background.jpg'),
         },
         title: {
             type: String,

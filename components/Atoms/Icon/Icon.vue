@@ -1,7 +1,10 @@
 <template>
     <div>
         <span class="el-beforeIcon">
-            <nuxt-link to="/icon"> <fa class="icon" :icon="icon" />{{ name }} </nuxt-link>
+            <nuxt-link :to="link">
+                <fa class="icon" :icon="icon" />
+                {{ name }}
+            </nuxt-link>
         </span>
     </div>
 </template>
@@ -17,6 +20,10 @@ export default {
         icon: {
             type: String,
             default: 'file-pdf',
+        },
+        link: {
+            type: String,
+            required: true,
         },
     },
 };

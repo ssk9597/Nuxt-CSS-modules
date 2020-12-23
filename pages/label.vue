@@ -3,22 +3,20 @@
         <!-- ラベル -->
         <div class="container">
             <div class="text-center">
-                <Label name="NEWS" />
+                <Label name="NEWS" labelColor="blue" padding="padding: 2px 4px" />
             </div>
         </div>
 
         <!-- リンクラベル -->
         <div class="container">
             <div class="text-center">
-                <LinkLabel name="NEWS" />
+                <LinkLabel name="NEWS" link="/" labelColor="blue-w" padding="padding: 2px 4px" />
             </div>
         </div>
 
         <!-- 楕円ラベル -->
         <div class="container">
-            <div class="text-center">
-                <RoundLabel name="NEWS" />
-            </div>
+            <RoundLabel :labelArray="labelArray" />
         </div>
     </div>
 </template>
@@ -33,6 +31,32 @@ export default {
         Label,
         LinkLabel,
         RoundLabel,
+    },
+    data() {
+        return {
+            labelArray: [
+                {
+                    id: 1,
+                    name: 'UI',
+                    labelColor: 'orange',
+                },
+                {
+                    id: 2,
+                    name: 'SEO',
+                    labelColor: 'orange',
+                },
+                {
+                    id: 3,
+                    name: 'Marketing',
+                    labelColor: 'orange',
+                },
+                {
+                    id: 4,
+                    name: 'MA',
+                    labelColor: 'orange',
+                },
+            ],
+        };
     },
 };
 </script>

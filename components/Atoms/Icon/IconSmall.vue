@@ -1,7 +1,8 @@
 <template>
     <div>
-        <nuxt-link to="/icon" class="el-beforeIconButton btn-color">
-            <fa class="icon" :icon="icon" />{{ name }}
+        <nuxt-link :to="link" class="el-beforeIconButton btn-color">
+            <fa class="icon" :icon="icon" />
+            {{ name }}
         </nuxt-link>
     </div>
 </template>
@@ -17,6 +18,10 @@ export default {
         icon: {
             type: String,
             default: 'download',
+        },
+        link: {
+            type: String,
+            required: true,
         },
     },
 };

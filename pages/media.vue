@@ -28,14 +28,23 @@
                 木曾路はすべて山の中である。あるところは岨づたいに行く崖の道であり、あるところは数十間の深さに臨む木曾川の岸であり、あるところは山の尾をめぐる谷の入り口である。
             </HalfReverseMedia>
         </div>
+
+        <div class="container">
+            <MediaButton title="人間失格">
+                恥の多い生涯を送って来ました。自分には、人間の生活というものが、見当つかないのです。自分は東北の田舎に生れましたので、汽車をはじめて見たのは、よほど大きくなってからでした。
+            </MediaButton>
+        </div>
     </div>
 </template>
 
 <script>
+//Molecules
 import Media from '@/components/Molecules/Media/Media';
 import ReverseMedia from '@/components/Molecules/Media/ReverseMedia';
 import HalfMedia from '@/components/Molecules/Media/HalfMedia';
 import HalfReverseMedia from '@/components/Molecules/Media/HalfReverseMedia';
+//Organisms
+import MediaButton from '@/components/Organisms/MediaButton/MediaButton';
 
 export default {
     components: {
@@ -43,6 +52,7 @@ export default {
         ReverseMedia,
         HalfMedia,
         HalfReverseMedia,
+        MediaButton,
     },
 };
 </script>

@@ -1,14 +1,19 @@
 <template>
     <div>
-        <nuxt-link :to="link" :style="padding" :class="labelColor" class="el-label">
-            {{ name }}
+        <nuxt-link
+            :to="link"
+            :style="padding"
+            :class="[btnColor, { 'icon-btn': icon }]"
+            class="el-btn"
+        >
+            {{ name }}<fa :class="{ icon: icon }" :icon="iconName" />
         </nuxt-link>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'LinkLable',
+    name: 'Button',
     props: {
         name: {
             type: String,
@@ -18,31 +23,54 @@ export default {
             type: String,
             default: '/',
         },
-        labelColor: {
+        btnColor: {
             type: String,
-            default: 'orange',
+            default: 'blue',
         },
         padding: {
             type: String,
-            default: 'padding: 0.2em 0.3em',
+            default: 'padding: 20px 10px',
+        },
+        icon: {
+            type: String,
+            required: false,
+        },
+        iconName: {
+            type: String,
+            required: false,
         },
     },
 };
 </script>
 
 <style lang="scss" scoped>
-.el-label {
+.el-btn {
     display: inline-block;
-    padding: 0.2em 0.3em;
+    width: 300px;
+    max-width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
     color: #fff;
-    font-size: 0.75rem;
-    font-weight: bold;
-    transition: 0.25s;
+    font-size: 1.125rem;
+    text-align: center;
     text-decoration: none;
-    cursor: pointer;
+    transition: 0.25s;
 }
 
-//ラベルの色
+//アイコン
+.icon-btn {
+    position: relative;
+    padding-right: 2em;
+    padding-left: 1.38em;
+}
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0.83em;
+    font-weight: 900;
+}
+
+//ボタンの色
 .navy {
     background-color: #001f3f;
     border: 2px solid transparent;

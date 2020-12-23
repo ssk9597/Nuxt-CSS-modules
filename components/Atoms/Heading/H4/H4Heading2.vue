@@ -19,7 +19,7 @@ export default {
 <style lang="scss" scoped>
 .el-lv3Heading {
     padding-bottom: 0.5rem;
-    border-bottom: solid 3px #0074d9;
+    border-bottom: solid 5px #0074d9;
     font-size: 1.25rem;
     font-weight: bold;
 }

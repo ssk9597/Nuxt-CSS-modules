@@ -21,7 +21,7 @@ export default {
     padding: 0.5rem; /*文字周りの余白*/
     color: #111111; /*文字色*/
     background: transparent; /*背景透明に*/
-    border-left: solid 5px #0074d9; /*左線（実線 太さ 色）*/
+    border-left: solid 7px #0074d9; /*左線（実線 太さ 色）*/
     font-size: 1.25rem;
     font-weight: bold;
 }

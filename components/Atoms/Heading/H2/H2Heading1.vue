@@ -27,7 +27,7 @@ export default {
 
 .el-lv2Heading:before {
     position: absolute;
-    bottom: -10px;
+    bottom: -5px;
     left: calc(50% - 30px);
     width: 60px;
     height: 5px;
