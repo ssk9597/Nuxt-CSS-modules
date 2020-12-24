@@ -2,52 +2,17 @@
     <div class="table-wrapper">
         <div class="container">
             <!-- テーブル（水平） -->
-            <HorizontalTable></HorizontalTable>
+            <HorizontalTable :horizontalTable="horizontalTable"></HorizontalTable>
         </div>
 
         <div class="container">
             <!-- テーブル（垂直） -->
-            <VerticalTable>
-                <thead>
-                    <tr>
-                        <th>名前</th>
-                        <th>所属</th>
-                        <th>職種</th>
-                        <th>得意分野</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>田中太郎</td>
-                        <td>株式会社〇〇</td>
-                        <td>マーケティング</td>
-                        <td>SEO</td>
-                    </tr>
-                    <tr>
-                        <td>佐藤花子</td>
-                        <td>株式会社〇〇</td>
-                        <td>営業</td>
-                        <td>BtoB営業</td>
-                    </tr>
-                    <tr>
-                        <td>鈴木一郎</td>
-                        <td>株式会社〇〇</td>
-                        <td>経理</td>
-                        <td>計算</td>
-                    </tr>
-                    <tr>
-                        <td>高橋大輔</td>
-                        <td>株式会社〇〇</td>
-                        <td>総務</td>
-                        <td>すべて</td>
-                    </tr>
-                </tbody>
-            </VerticalTable>
+            <VerticalTable :tablesTh="tablesTh" :tablesTd="tablesTd" />
         </div>
 
         <div class="container">
             <!-- テーブル（交差） -->
-            <CrossingTable></CrossingTable>
+            <CrossingTable :tablesTh="tablesTh" :tablesTd="tablesTd" />
         </div>
     </div>
 </template>
@@ -62,6 +27,33 @@ export default {
         HorizontalTable,
         VerticalTable,
         CrossingTable,
+    },
+    data() {
+        return {
+            horizontalTable: [
+                { id: 1, th: '名前', td: '田中太郎' },
+                { id: 2, th: '所属', td: '株式会社〇〇' },
+                { id: 3, th: '職種', td: 'マーケティング' },
+                { id: 4, th: '得意分野', td: 'SEO' },
+            ],
+            tablesTh: [
+                { id: 1, th: '名前' },
+                { id: 2, th: '所属' },
+                { id: 3, th: '職種' },
+                { id: 4, th: '得意分野' },
+            ],
+            tablesTd: [
+                { id: 1, td1: '田中太郎', td2: '株式会社〇〇', td3: 'マーケティング', td4: 'SEO' },
+                {
+                    id: 2,
+                    td1: '佐藤花子',
+                    td2: '株式会社〇〇',
+                    td3: 'マーケティング',
+                    td4: '広告',
+                },
+                { id: 3, td1: '鈴木一郎', td2: '株式会社〇〇', td3: '営業', td4: 'テレアポ' },
+            ],
+        };
     },
 };
 </script>

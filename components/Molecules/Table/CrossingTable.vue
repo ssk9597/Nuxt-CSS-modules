@@ -1,36 +1,19 @@
 <template>
     <div class="table">
         <table>
-            <slot>
-                <thead>
-                    <tr>
-                        <th class="cross">名前</th>
-                        <th>所属</th>
-                        <th>職種</th>
-                        <th>得意分野</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th class="cross">田中太郎</th>
-                        <td>株式会社〇〇</td>
-                        <td>マーケティング</td>
-                        <td>SEO</td>
-                    </tr>
-                    <tr>
-                        <th class="cross">佐藤花子</th>
-                        <td>株式会社〇〇</td>
-                        <td>営業</td>
-                        <td>BtoB営業</td>
-                    </tr>
-                    <tr>
-                        <th class="cross">鈴木一郎</th>
-                        <td>株式会社〇〇</td>
-                        <td>経理</td>
-                        <td>計算</td>
-                    </tr>
-                </tbody>
-            </slot>
+            <thead>
+                <tr>
+                    <th v-for="tableTh in tablesTh" :key="tableTh.id">{{ tableTh.th }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="tableTd in tablesTd" :key="tableTd.id">
+                    <th>{{ tableTd.td1 }}</th>
+                    <td>{{ tableTd.td2 }}</td>
+                    <td>{{ tableTd.td3 }}</td>
+                    <td>{{ tableTd.td4 }}</td>
+                </tr>
+            </tbody>
         </table>
     </div>
 </template>
@@ -38,6 +21,16 @@
 <script>
 export default {
     name: 'VerticalTable',
+    props: {
+        tablesTh: {
+            type: Array,
+            required: true,
+        },
+        tablesTd: {
+            type: Array,
+            required: true,
+        },
+    },
 };
 </script>
 
@@ -60,6 +53,18 @@ export default {
         font-weight: bold;
         vertical-align: middle;
         white-space: nowrap;
+    }
+
+    & thead,
+    & tbody {
+        & tr {
+            & th {
+                &:first-child {
+                    position: sticky;
+                    left: 0;
+                }
+            }
+        }
     }
 
     & .cross {

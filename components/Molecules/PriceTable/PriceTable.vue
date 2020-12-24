@@ -18,6 +18,14 @@
                         <dt>{{ table.featureTitle3 }}</dt>
                         <dd>{{ table.featureText3 }}</dd>
                     </dl>
+                    <div class="text-center">
+                        <Button
+                            name="このプランで契約する"
+                            padding="padding: 10px 10px"
+                            icon="true"
+                            iconName="arrow-right"
+                        />
+                    </div>
                 </div>
             </li>
         </ul>
@@ -25,8 +33,12 @@
 </template>
 
 <script>
+import Button from '@/components/Atoms/Button/Button';
 export default {
     name: 'PriceTable',
+    components: {
+        Button,
+    },
     props: {
         tables: {
             type: Array,
@@ -94,6 +106,11 @@ export default {
     & dd {
         margin-bottom: 20px;
     }
+}
+
+.text-center {
+    margin: 30px 0;
+    text-align: center;
 }
 
 // //560px以上はタブレット

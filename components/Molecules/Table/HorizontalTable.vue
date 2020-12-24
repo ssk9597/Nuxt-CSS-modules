@@ -2,24 +2,10 @@
     <div class="table">
         <table>
             <tbody>
-                <slot>
-                    <tr>
-                        <th>名前</th>
-                        <td>田中太郎</td>
-                    </tr>
-                    <tr>
-                        <th>所属</th>
-                        <td>株式会社〇〇</td>
-                    </tr>
-                    <tr>
-                        <th>職種</th>
-                        <td>マーケティング</td>
-                    </tr>
-                    <tr>
-                        <th>得意分野</th>
-                        <td>SEO</td>
-                    </tr>
-                </slot>
+                <tr v-for="table in horizontalTable" :key="table.id">
+                    <th>{{ table.th }}</th>
+                    <td>{{ table.td }}</td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -28,6 +14,12 @@
 <script>
 export default {
     name: 'HorizontalTable',
+    props: {
+        horizontalTable: {
+            type: Array,
+            required: true,
+        },
+    },
 };
 </script>
 
