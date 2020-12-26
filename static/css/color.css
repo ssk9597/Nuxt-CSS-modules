@@ -1,0 +1,220 @@
+.navy {
+    background-color: #001f3f;
+    border: 2px solid transparent;
+}
+.navy:focus,
+.navy:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #001f3f;
+}
+.navy-w {
+    color: #001f3f;
+    border: 2px solid #001f3f;
+    background-color: #fff;
+}
+.navy-w:focus,
+.navy-w:hover {
+    background-color: #001f3f;
+    color: #fff;
+}
+.blue {
+    background-color: #0074d9;
+    border: 2px solid transparent;
+}
+.blue:focus,
+.blue:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #0074d9;
+}
+.blue-w {
+    color: #0074d9;
+    border: 2px solid #0074d9;
+    background-color: #fff;
+}
+.blue-w:focus,
+.blue-w:hover {
+    background-color: #0074d9;
+    color: #fff;
+}
+.olive {
+    background-color: #3d9970;
+    border: 2px solid transparent;
+}
+.olive:focus,
+.olive:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #3d9970;
+}
+.olive-w {
+    color: #3d9970;
+    border: 2px solid #3d9970;
+    background-color: #fff;
+}
+.olive-w:focus,
+.olive-w:hover {
+    background-color: #3d9970;
+    color: #fff;
+}
+.green {
+    background-color: #2ecc40;
+    border: 2px solid transparent;
+}
+.green:focus,
+.green:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #2ecc40;
+}
+.green-w {
+    color: #2ecc40;
+    border: 2px solid #2ecc40;
+    background-color: #fff;
+}
+.green-w:focus,
+.green-w:hover {
+    background-color: #2ecc40;
+    color: #fff;
+}
+.orange {
+    background-color: #ff851b;
+    border: 2px solid transparent;
+}
+.orange:focus,
+.orange:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #ff851b;
+}
+.orange-w {
+    color: #ff851b;
+    border: 2px solid #ff851b;
+    background-color: #fff;
+}
+.orange-w:focus,
+.orange-w:hover {
+    background-color: #ff851b;
+    color: #fff;
+}
+.red {
+    background-color: #ff4136;
+    border: 2px solid transparent;
+}
+.red:focus,
+.red:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #ff4136;
+}
+.red-w {
+    color: #ff4136;
+    border: 2px solid #ff4136;
+    background-color: #fff;
+}
+.red-w:focus,
+.red-w:hover {
+    background-color: #ff4136;
+    color: #fff;
+}
+.maroon {
+    background-color: #85144b;
+    border: 2px solid transparent;
+}
+.maroon:focus,
+.maroon:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #85144b;
+}
+.maroon-w {
+    color: #85144b;
+    border: 2px solid #85144b;
+    background-color: #fff;
+}
+.maroon-w:focus,
+.maroon-w:hover {
+    background-color: #85144b;
+    color: #fff;
+}
+.fuchsia {
+    background-color: #f012be;
+    border: 2px solid transparent;
+}
+.fuchsia:focus,
+.fuchsia:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #f012be;
+}
+.fuchsia-w {
+    color: #f012be;
+    border: 2px solid #f012be;
+    background-color: #fff;
+}
+.fuchsia-w:focus,
+.fuchsia-w:hover {
+    background-color: #f012be;
+    color: #fff;
+}
+.purple {
+    background-color: #b10dc9;
+    border: 2px solid transparent;
+}
+.purple:focus,
+.purple:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #b10dc9;
+}
+.purple-w {
+    color: #b10dc9;
+    border: 2px solid #b10dc9;
+    background-color: #fff;
+}
+.purple-w:focus,
+.purple-w:hover {
+    background-color: #b10dc9;
+    color: #fff;
+}
+.black {
+    background-color: #111111;
+    border: 2px solid transparent;
+}
+.black:focus,
+.black:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #111111;
+}
+.black-w {
+    color: #111111;
+    border: 2px solid #111111;
+    background-color: #fff;
+}
+.black-w:focus,
+.black-w:hover {
+    background-color: #111111;
+    color: #fff;
+}
+.gray {
+    background-color: #aaaaaa;
+    border: 2px solid transparent;
+}
+.gray:focus,
+.gray:hover {
+    background-color: #fff;
+    border-color: currentColor;
+    color: #aaaaaa;
+}
+.gray-w {
+    color: #aaaaaa;
+    border: 2px solid #aaaaaa;
+    background-color: #fff;
+}
+.gray:focus,
+.gray:hover {
+    background-color: #aaaaaa;
+    color: #fff;
+}

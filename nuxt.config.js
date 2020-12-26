@@ -8,6 +8,7 @@ export default {
             { hid: 'description', name: 'description', content: '' },
         ],
         link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+        link: [{ rel: 'stylesheet', href: '/css/color.css' }],
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
