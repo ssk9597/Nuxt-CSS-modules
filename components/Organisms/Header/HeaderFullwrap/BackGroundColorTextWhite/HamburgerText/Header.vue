@@ -17,20 +17,20 @@
                 </button>
             </div>
             <!-- メニュー -->
-            <nav class="menu-nav" :class="{ 'menu-nav-active': isToggle }" @click="toggle()">
-                <nuxt-link to="/media" class="menu-nav-item">
+            <nav class="menu-nav" :class="{ 'menu-nav-active': isToggle }">
+                <nuxt-link to="/media" class="menu-nav-item" @click.native="toggle()">
                     <fa class="icon" icon="angle-right" />spMenu1
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="icon" icon="angle-right" />spMenu2
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="icon" icon="angle-right" />spMenu3
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="icon" icon="angle-right" />spMenu4
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="icon" icon="angle-right" />spMenu5
                 </nuxt-link>
             </nav>

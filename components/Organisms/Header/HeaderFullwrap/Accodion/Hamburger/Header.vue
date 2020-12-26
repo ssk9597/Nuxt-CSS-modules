@@ -18,20 +18,20 @@
             </div>
             <!-- メニュー -->
             <nav class="menu-nav" :class="{ 'menu-nav-active': isToggle }">
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="angle-right" />
                     TOP
                 </nuxt-link>
                 <AccordionMenu parentMenu="企業情報" :childMenus="corporateInformation" />
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="angle-right" />
                     グループ企業一覧
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="angle-right" />
                     ニュースリリース
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="angle-right" />
                     採用情報
                 </nuxt-link>

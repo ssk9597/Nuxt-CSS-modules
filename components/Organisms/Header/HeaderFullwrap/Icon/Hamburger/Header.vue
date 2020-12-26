@@ -17,38 +17,38 @@
                 </button>
             </div>
             <!-- メニュー -->
-            <nav class="menu-nav" :class="{ 'menu-nav-active': isToggle }" @click="toggle()">
-                <nuxt-link to="/" class="menu-nav-item">
+            <nav class="menu-nav" :class="{ 'menu-nav-active': isToggle }">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="inbox" />
                     特徴
                     <fa class="after-icon" icon="angle-right" />
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="box-open" />
                     サービス
                     <fa class="after-icon" icon="angle-right" />
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="folder" />
                     事例
                     <fa class="after-icon" icon="angle-right" />
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="tags" />
                     価格
                     <fa class="after-icon" icon="angle-right" />
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="building" />
                     会社概要
                     <fa class="after-icon" icon="angle-right" />
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="user-tie" />
                     採用情報
                     <fa class="after-icon" icon="angle-right" />
                 </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item">
+                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="envelope" />
                     お問い合わせ
                     <fa class="after-icon" icon="angle-right" />
