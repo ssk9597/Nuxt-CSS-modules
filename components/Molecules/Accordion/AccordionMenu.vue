@@ -21,7 +21,10 @@
                     v-for="menu in childMenus"
                     :key="menu.id"
                     :to="menu.link"
-                    @click.native="AccordionToggle()"
+                    @click.native="
+                        AccordionToggle();
+                        toggle();
+                    "
                 >
                     <fa class="before-icon" icon="angle-right" />
                     {{ menu.nav }}
