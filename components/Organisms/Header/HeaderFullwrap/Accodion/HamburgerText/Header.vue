@@ -22,7 +22,11 @@
                     <fa class="before-icon" icon="angle-right" />
                     TOP
                 </nuxt-link>
-                <AccordionMenu parentMenu="企業情報" :childMenus="corporateInformation" />
+                <AccordionMenu
+                    parentMenu="企業情報"
+                    :childMenus="corporateInformation"
+                    @AccordionToggle="toggle()"
+                />
                 <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
                     <fa class="before-icon" icon="angle-right" />
                     グループ企業一覧
@@ -35,8 +39,16 @@
                     <fa class="before-icon" icon="angle-right" />
                     採用情報
                 </nuxt-link>
-                <AccordionMenu parentMenu="サステナビリティ" :childMenus="sustainability" />
-                <AccordionMenu parentMenu="株主・投資家の皆さま" :childMenus="investment" />
+                <AccordionMenu
+                    parentMenu="サステナビリティ"
+                    :childMenus="sustainability"
+                    @AccordionToggle="toggle()"
+                />
+                <AccordionMenu
+                    parentMenu="株主・投資家の皆さま"
+                    :childMenus="investment"
+                    @AccordionToggle="toggle()"
+                />
             </nav>
             <!-- PCメニュー -->
             <PCheader />

@@ -21,6 +21,7 @@
                     v-for="menu in childMenus"
                     :key="menu.id"
                     :to="menu.link"
+                    @click.native="AccordionToggle()"
                 >
                     <fa class="before-icon" icon="angle-right" />
                     {{ menu.nav }}
@@ -51,6 +52,9 @@ export default {
     methods: {
         toggle() {
             this.open = !this.open;
+        },
+        AccordionToggle() {
+            this.$emit('AccordionToggle');
         },
     },
 };

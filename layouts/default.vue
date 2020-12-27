@@ -16,8 +16,8 @@
 // import Header from '@/components/Organisms/Header/HeaderFullwrap/Icon/Hamburger/Header';
 
 //Accodion//
-// import Header from '@/components/Organisms/Header/HeaderFullwrap/Accodion/HamburgerText/Header';
-import Header from '@/components/Organisms/Header/HeaderFullwrap/Accodion/Hamburger/Header';
+import Header from '@/components/Organisms/Header/HeaderFullwrap/Accodion/HamburgerText/Header';
+// import Header from '@/components/Organisms/Header/HeaderFullwrap/Accodion/Hamburger/Header';
 
 export default {
     components: {
