@@ -1,67 +1,60 @@
 <template>
-    <div class="container">
-        <!-- SPメニュー -->
-        <header class="header">
-            <div class="header-wrapper">
-                <!-- ロゴ -->
-                <h1 class="header-logo">
-                    <nuxt-link to="/">
-                        <img :src="require('@/assets/image/symbol.png')" alt="ロゴ" />
-                    </nuxt-link>
-                </h1>
-                <!-- Hamburger -->
-                <button class="menu-trigger" @click="toggle()" :class="{ active: isToggle }">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-            <!-- メニュー -->
-            <nav class="menu-nav" :class="{ 'menu-nav-active': isToggle }">
-                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
-                    <fa class="before-icon" icon="angle-right" />
-                    TOP
+    <div class="header">
+        <div class="header-wrapper">
+            <!-- ロゴ -->
+            <h1 class="header-logo">
+                <nuxt-link to="/">
+                    <img :src="require('@/assets/image/symbol.png')" alt="ロゴ" />
                 </nuxt-link>
-                <AccordionMenu
-                    parentMenu="企業情報"
-                    :childMenus="corporateInformation"
-                    @AccordionToggle="toggle()"
-                />
-                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
-                    <fa class="before-icon" icon="angle-right" />
-                    グループ企業一覧
-                </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
-                    <fa class="before-icon" icon="angle-right" />
-                    ニュースリリース
-                </nuxt-link>
-                <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
-                    <fa class="before-icon" icon="angle-right" />
-                    採用情報
-                </nuxt-link>
-                <AccordionMenu
-                    parentMenu="サステナビリティ"
-                    :childMenus="sustainability"
-                    @AccordionToggle="toggle()"
-                />
-                <AccordionMenu
-                    parentMenu="株主・投資家の皆さま"
-                    :childMenus="investment"
-                    @AccordionToggle="toggle()"
-                />
-            </nav>
-            <!-- PCメニュー -->
-            <PCheader />
-        </header>
+            </h1>
+            <!-- Hamburger -->
+            <button class="menu-trigger" @click="toggle()" :class="{ active: isToggle }">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- メニュー -->
+        <nav class="menu-nav" :class="{ 'menu-nav-active': isToggle }">
+            <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
+                <fa class="before-icon" icon="angle-right" />
+                TOP
+            </nuxt-link>
+            <AccordionMenu
+                parentMenu="企業情報"
+                :childMenus="corporateInformation"
+                @AccordionToggle="toggle()"
+            />
+            <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
+                <fa class="before-icon" icon="angle-right" />
+                グループ企業一覧
+            </nuxt-link>
+            <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
+                <fa class="before-icon" icon="angle-right" />
+                ニュースリリース
+            </nuxt-link>
+            <nuxt-link to="/" class="menu-nav-item" @click.native="toggle()">
+                <fa class="before-icon" icon="angle-right" />
+                採用情報
+            </nuxt-link>
+            <AccordionMenu
+                parentMenu="サステナビリティ"
+                :childMenus="sustainability"
+                @AccordionToggle="toggle()"
+            />
+            <AccordionMenu
+                parentMenu="株主・投資家の皆さま"
+                :childMenus="investment"
+                @AccordionToggle="toggle()"
+            />
+        </nav>
     </div>
 </template>
 
 <script>
-import PCheader from '@/components/Organisms/Header/HeaderFullwrap/BackGroundColorTextWhite/HamburgerText/PCheader';
 import AccordionMenu from '@/components/Molecules/Accordion/AccordionMenu';
 export default {
     components: {
-        PCheader,
         AccordionMenu,
     },
     data() {
@@ -102,13 +95,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-//position fixed
-.container {
-    position: fixed;
-    width: 100%;
-    height: 8vh;
-    z-index: 1000;
-}
 // SPメニュー
 .header {
     position: relative;
@@ -163,7 +149,6 @@ export default {
             bottom: 0;
         }
     }
-
     &:after {
         position: absolute;
         left: -5px;
@@ -204,10 +189,10 @@ export default {
     flex-direction: column;
     align-items: center;
     background: #fff;
-    transition: all 0.3s;
+    transition: all 0.5s;
     opacity: 0;
-    display: none;
     overflow-y: scroll;
+    visibility: hidden;
     &-item {
         position: relative;
         text-align: left;
@@ -218,14 +203,13 @@ export default {
         border-top: 1px solid #ddd;
         text-decoration: none;
         display: block;
-
         &:last-child {
             border-bottom: 1px solid #ddd;
         }
     }
     &-active {
+        visibility: visible;
         opacity: 1;
-        display: block;
     }
 }
 //アイコン
@@ -275,16 +259,6 @@ export default {
                 }
             }
         }
-    }
-}
-
-// //960px以上はPC
-@media screen and (min-width: 960px) {
-    .header-wrapper {
-        display: none;
-    }
-    .menu-nav {
-        display: none;
     }
 }
 </style>

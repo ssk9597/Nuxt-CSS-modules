@@ -15,6 +15,7 @@ import {
     faEnvelope,
     faPlus,
     faMinus,
+    faAngleDown,
 } from '@fortawesome/free-solid-svg-icons';
 
 // nuxt.config.tsでCSSファイルを追加
@@ -35,6 +36,7 @@ const solidIcons = [
     faEnvelope,
     faPlus,
     faMinus,
+    faAngleDown,
 ];
 
 // 利用するアイコンをlibraryに追加

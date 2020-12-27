@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import PCheader from '@/components/Organisms/Header/HeaderFullwrap/BackGroundColorTextWhite/Hamburger/PCheader';
-import SPheader from '@/components/Organisms/Header/HeaderFullwrap/BackGroundColorTextWhite/Hamburger/SPheader';
+import PCheader from '@/components/Organisms/Header/HeaderFullwrap/Accordion/HamburgerText/PCheader';
+import SPheader from '@/components/Organisms/Header/HeaderFullwrap/Accordion/HamburgerText/SPheader';
 export default {
     components: {
         PCheader,

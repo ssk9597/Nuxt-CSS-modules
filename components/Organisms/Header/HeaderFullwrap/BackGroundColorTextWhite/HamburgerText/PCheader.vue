@@ -9,11 +9,12 @@
             </h1>
             <!-- PCメニュー -->
             <nav class="header-nav">
-                <nuxt-link to="/" class="header-nav-item">pcMenu1</nuxt-link>
-                <nuxt-link to="/" class="header-nav-item">pcMenu2</nuxt-link>
-                <nuxt-link to="/" class="header-nav-item">pcMenu3</nuxt-link>
-                <nuxt-link to="/" class="header-nav-item">pcMenu4</nuxt-link>
-                <nuxt-link to="/" class="header-nav-contact">お問い合わせ</nuxt-link>
+                <nuxt-link to="/" class="header-nav-item">商品情報</nuxt-link>
+                <nuxt-link to="/" class="header-nav-item">キャンペーン</nuxt-link>
+                <nuxt-link to="/" class="header-nav-item">CM情報</nuxt-link>
+                <nuxt-link to="/" class="header-nav-item">工場見学・学ぶ</nuxt-link>
+                <nuxt-link to="/" class="header-nav-item">手づくりレシピ</nuxt-link>
+                <nuxt-link to="/" class="header-nav-contact">オンラインショップ</nuxt-link>
             </nav>
         </div>
     </div>
@@ -25,66 +26,56 @@ export default {};
 
 <style lang="scss" scoped>
 .header {
-    display: none;
-}
-// //560px以上はタブレット
-@media screen and (min-width: 560px) {
-}
+    padding: 0 15px;
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 0.1rem 1rem rgba(34, 34, 34, 0.2);
 
-// //960px以上はPC
-@media screen and (min-width: 960px) {
-    .header {
-        padding: 0 15px;
-        display: block;
-        background-color: #fff;
-        box-shadow: 0 0.1rem 1rem rgba(34, 34, 34, 0.2);
+    &-wrapper {
+        height: 8vh;
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-        &-wrapper {
-            height: 8vh;
-            max-width: 1280px;
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        &-logo {
-            & a {
-                display: flex;
-                align-items: center;
-            }
-        }
-
-        &-nav {
+    &-logo {
+        & a {
             display: flex;
             align-items: center;
-            &-item,
-            &-contact {
-                line-height: 8vh;
-                padding: 0 10px;
-                font-weight: bold;
-                text-decoration: none;
+        }
+    }
 
-                &:hover {
-                    opacity: 0.75;
-                }
-            }
+    &-nav {
+        display: flex;
+        align-items: center;
+        &-item,
+        &-contact {
+            line-height: 8vh;
+            padding: 0 10px;
+            font-weight: bold;
+            text-decoration: none;
 
-            &-item {
-                color: #111;
+            &:hover {
+                opacity: 0.75;
             }
+        }
 
-            &-contact {
-                font-weight: bold;
-                margin-left: 10px;
-                padding: 0 20px;
-                height: 40px;
-                line-height: 40px;
-                border-radius: 10px;
-                background: #0074d9;
-                color: #fff;
-            }
+        &-item {
+            color: #111;
+        }
+
+        &-contact {
+            font-weight: bold;
+            margin-left: 10px;
+            padding: 0 20px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 10px;
+            background: #0074d9;
+            color: #fff;
         }
     }
 }

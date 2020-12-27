@@ -15,7 +15,7 @@ export default {
     css: ['@fortawesome/fontawesome-svg-core/styles.css'],
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-    plugins: ['@/plugins/fontawesome'],
+    plugins: ['@/plugins/fontawesome', { src: '~/plugins/vue-awesome-swiper', ssr: false }],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
     components: true,
@@ -27,5 +27,5 @@ export default {
     modules: [],
 
     // Build Configuration (https://go.nuxtjs.dev/config-build)
-    build: {},
+    build: { vendor: ['vue-awesome-swiper'] },
 };

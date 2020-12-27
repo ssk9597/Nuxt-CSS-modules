@@ -1,35 +1,33 @@
 <template>
-    <div>
-        <div class="accordion">
-            <div class="accordion-ttl" v-if="open">
-                <div @click="toggle()">
-                    <fa class="before-icon" icon="angle-right" />
-                    {{ parentMenu }}
-                    <fa class="after-icon" icon="plus" />
-                </div>
+    <div class="accordion">
+        <div class="accordion-ttl" v-if="open">
+            <div @click="toggle()">
+                <fa class="before-icon" icon="angle-right" />
+                {{ parentMenu }}
+                <fa class="after-icon" icon="plus" />
             </div>
-            <div class="accordion-ttl" v-else>
-                <div @click="toggle()">
-                    <fa class="before-icon" icon="angle-right" />
-                    {{ parentMenu }}
-                    <fa class="after-icon" icon="minus" />
-                </div>
+        </div>
+        <div class="accordion-ttl" v-else>
+            <div @click="toggle()">
+                <fa class="before-icon" icon="angle-right" />
+                {{ parentMenu }}
+                <fa class="after-icon" icon="minus" />
             </div>
-            <div class="accordion-body" v-if="!open">
-                <nuxt-link
-                    class="accordion-body-text"
-                    v-for="menu in childMenus"
-                    :key="menu.id"
-                    :to="menu.link"
-                    @click.native="
-                        AccordionToggle();
-                        toggle();
-                    "
-                >
-                    <fa class="before-icon" icon="angle-right" />
-                    {{ menu.nav }}
-                </nuxt-link>
-            </div>
+        </div>
+        <div class="accordion-body" v-if="!open">
+            <nuxt-link
+                class="accordion-body-text"
+                v-for="menu in childMenus"
+                :key="menu.id"
+                :to="menu.link"
+                @click.native="
+                    AccordionToggle();
+                    toggle();
+                "
+            >
+                <fa class="before-icon" icon="angle-right" />
+                {{ menu.nav }}
+            </nuxt-link>
         </div>
     </div>
 </template>
@@ -65,6 +63,7 @@ export default {
 
 <style lang="scss" scoped>
 .accordion {
+    width: 100%;
     &-ttl {
         & div {
             position: relative;
