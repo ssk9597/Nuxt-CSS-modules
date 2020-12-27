@@ -166,6 +166,7 @@ export default {
     transition: all 0.3s;
     opacity: 0;
     display: none;
+    overflow-y: scroll;
     &-item {
         position: relative;
         text-align: left;
